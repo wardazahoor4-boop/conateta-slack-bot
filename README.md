@@ -1,52 +1,63 @@
 # Conateta Slack Bot
 
-A 24/7 Slack bot that responds to custom commands with facts, jokes, latency checks, and helpful guides! Built for Hack Club.
+a slack bot that responds to certain commands for 24/7.
 
-## Features
-❓ /conateta-help: View the full list of available commands and instructions.
+## features
+For now i made 4 commands which are:
 
-⚡ /conateta-ping: Quickly check the bot's latency and responsiveness.
+/conateta-help: View full list of available commands
 
-🐱 /conateta-catfact: Fetch a fun, interesting cat fact on demand.
+/conateta-ping: Check bot's latency
 
-🐊 /conateta-joke: Get a quick pun/joke to lighten up the channel.
+/conateta-catfact: Get a random fact about cats
 
-🚀 24/7 Uptime: Hosted on Nest so it never slacks off!
+/conateta-joke: Get a random quick joke
 
-## Built With
+## about this project
+this is a simple slack bot that i created for hackclub slack workspace. I wanted to build something simple so i focused on making 4 core commands that handle basic info and fun API stuff directly inside slack.
 
-* Programming Language: JavaScript
-* Runtime/Environment: Node.js
-* Framework/SDK: Slack bolt for JavaScript
-* APIs: External APIs for fetching cat facts and jokes 
-* Hosting Platform: Nest (24/7 uptime)
+## why i made it
+I really wanted to learn how real world bots work under the hood and how APIs actually connect to slack. Building this helped me figure out how to set up slash commands in Node.js, fetch data from external APIs, process user inputs, and keep everything running smoothly.
 
-## Quick start and Local Setup
+## how to use the bot
+The bot is already installed and running in the Hack Club Slack workspace.
+To use it:
+Open Slack and head over to the #bot-spam.
+Type any of the slash commands into the chat bar and hit send:
 
-### Prerequisites
+/conateta-help: shows you the full list of commands
 
-* Node.js (v18 or higher)
-* A Slack App with App-Level Tokens (`xapp-...`) and Bot Tokens (`xoxb-...`) configured with Socket Mode enabled.
+/conateta-ping: checks if the bot is online and how fast it responds
 
-### Environment Variables
+/conateta-catfact: sends a random cat fact
 
-Create a `.env` file in the root directory and add your Slack credentials:
+/conateta-joke: sends a quick joke
 
-```env
-SLACK_BOT_TOKEN=xoxb-your-bot-token 
-SLACK_APP_TOKEN=xapp-your-app-token
-```
-### Running Locally
+## setup
+if you want to run your own instance of bot:
 
-1. **Clone & Install Dependencies:**
-```bash
-git clone https://github.com/wardazahoor4-boop/conateta-slack-bot.git
-cd conateta-slack-bot
+clone the repository
+
+git clone https://github.com/wardazahoor4-boop/conateta-slack-bot
+
+install independencies 
+
 npm install
-```
-2. **Start the Bot**
-```bash
+
+set up your environment variables:
+
+create a .env file in the root directory and add your slack tokens:
+
+SLACK_BOT_TOKEN=your_token
+
+SLACK_APP_TOKEN=your_token
+
+run the bot:
+
 node index.js
-```
+
+## what i learned
+
+i learned a lot about how apis and backend stuff actually work behind the scenes. building this taught me how to set up slash commands in node.js using slack bolt, fetch live data from external apis for the jokes and cat facts, keep api keys safe using .env files, and host the code on a server so the bot stays online 24/7.
 
 
